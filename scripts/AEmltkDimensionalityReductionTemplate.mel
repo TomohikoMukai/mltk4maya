@@ -1,0 +1,17 @@
+global proc AEmltkDimensionalityReductionTemplate(string $nodeName) {
+    editorTemplate -suppress "output";
+    editorTemplate -suppress "target";
+    editorTemplate -suppress "dimOutputs";
+    editorTemplate -suppress "dimTargets";
+    editorTemplate -beginScrollLayout;
+        editorTemplate -beginLayout "Dimensionality Reduction" -collapse 0;
+            editorTemplate -addControl "method";
+            editorTemplate -addControl "dimInputs";
+            editorTemplate -addControl "input";
+            editorTemplate -addControl "basis";
+            editorTemplate -addControl "encoderNode";
+            editorTemplate -addControl "codingMode";
+        editorTemplate -endLayout;
+        editorTemplate -addExtraControls;
+    editorTemplate -endScrollLayout;
+}

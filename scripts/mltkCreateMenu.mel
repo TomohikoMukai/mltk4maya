@@ -1,0 +1,38 @@
+global proc createLinearRegression()
+{
+	createNode "mltkLinearRegression";
+}
+global proc createDimensionalityReduction()
+{
+	createNode "mltkDimensionalityReduction";
+}
+
+global proc learnNodes()
+{
+	LearnMltkNodes();
+}
+
+global proc mltkCreateMenu()
+{
+    setParent "MayaWindow";
+	$mlMenu = `menu -exists "MukaiLab"`;
+	if ($mlMenu == 0)
+	{
+		menu -label "MukaiLab" "MukaiLab";
+	}
+	setParent -menu "MukaiLab";
+
+	$mlMLmenu = `menuItem -exists "MLTK"`;
+	if ($mlMLmenu == 0)
+	{
+		menuItem -subMenu true -label "MLTK" "MLTK";
+	}
+	setParent -menu "MLTK";
+
+	menuItem -divider true -dividerLabel "Creation";
+	menuItem -label "Linear regression" -command createLinearRegression "LinearRegression";
+	menuItem -label "Dimensionality reduction" -command createDimensionalityReduction "DimensionalityReduction";
+
+	menuItem -divider true -dividerLabel "Learn";
+	menuItem -label "Learn" -command learnNodes "LearnMltkNodes";
+}

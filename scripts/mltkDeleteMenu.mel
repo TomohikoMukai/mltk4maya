@@ -1,0 +1,16 @@
+global proc mltkDeleteMenu()
+{
+    $mlMenu = `menu -exists "MayaWindow|MukaiLab|MLTK"`;
+    if ($mlMenu != 0)
+    {
+        menu -edit -deleteAllItems "MayaWindow|MukaiLab|MLTK";
+        deleteUI -menuItem "MayaWindow|MukaiLab|MLTK";
+    }
+
+    $itemArray = `menu -query -itemArray "MayaWindow|MukaiLab"`;
+    $numItems = `size $itemArray`;
+    if ($numItems == 0)
+    {
+        deleteUI -menu "MayaWindow|MukaiLab";
+    }
+}

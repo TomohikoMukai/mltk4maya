@@ -1,0 +1,14 @@
+global proc AEmltkLinearRegressionTemplate(string $nodeName) {
+    editorTemplate -suppress "output";
+    editorTemplate -suppress "target";
+    editorTemplate -suppress "dimTargets";
+    editorTemplate -beginScrollLayout;
+        editorTemplate -beginLayout "Linear Regression" -collapse 0;
+            editorTemplate -addControl "dimInputs";
+            editorTemplate -addControl "dimOutputs";
+            editorTemplate -addControl "input";
+            editorTemplate -addControl "coefficient";
+        editorTemplate -endLayout;
+        editorTemplate -addExtraControls;
+    editorTemplate -endScrollLayout;
+}
