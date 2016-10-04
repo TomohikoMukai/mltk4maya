@@ -6,7 +6,11 @@ Autodesk Maya向けの簡易的な機械学習ツールです．今のところ�
 * scriptsフォルダにあるファイル一式を，Mayaのスクリプトパス（MAYA_SCRIPT_PATH）が通っているフォルダに置きます。
 
 ## 利用手順
+### 線形回帰を用いたexpressionの復元テスト（YouTube）
 [![MLTK-LinearRegression](http://img.youtube.com/vi/vKiY2CQll4Q/0.jpg)](https://youtu.be/vKiY2CQll4Q)
+
+### 特異値分解を用いた次元削減（YouTube）
+to be uploaded
 
 ### 開発＆テスト環境
 * Windows 7 Professional x64, Windows 10 Pro
